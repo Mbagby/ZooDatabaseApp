@@ -1,0 +1,26 @@
+
+<% include ../partials/header %>
+
+<form action="/zoos/<%= zoo.id%>/animals" method="POST">
+  <div>
+    <label for="name">Animal Name:</label>
+    <input autofocus  type="text" name="animal[name]" id="name">
+  </div>
+  <div>
+    <label for="species">Species:</label>
+    <input type="text" name="animal[species]" id="species">
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input type="text" name="animal[age]" id="age">
+  </div>
+  <div>
+    <label for="photo">Photo:</label>
+    <input type="text" name="animal[photo]" id="photo">
+  </div>
+  <div>
+    <input type="submit" value="Add Animal">
+</div>
+</form>
+
+<% include ../partials/footer %>

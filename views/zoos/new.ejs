@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+<h1>Add a New Zoo</h1>
+<a href= "/zoos"> See all Zoos </a>
+
+<form action = "/zoos" method="POST">
+  <div class="form-group">
+    <label for="name"> Zoo Name: </label>
+    <input type="text" class="form-control" name="zoo[name]" id="name" autofocus>
+  </div>
+  <div class="form-group">
+    <label for="location"> Location: </label>
+    <input type="text" class="form-control" name="zoo[location]" id="location" autofocus>
+  </div>
+ <input type="submit" value="Add" class="btn btn-lg btn-success">
+ </form>
+
+<% include ../partials/footer %>

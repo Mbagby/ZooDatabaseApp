@@ -1,0 +1,9 @@
+<% include ../partials/header %>
+<h1> <%= zoo.name %> Animals </h1>
+<% zoo.animals.forEach(function(animal){%>
+<a href="/animals/<%= animal._id%>">See More about <%= animal.name%></a>
+<a href="/animals/<%= animal._id%>/edit">Edit <%= animal.name%></a>
+<% })%>
+<a href="/zoos/<%= zoo.id%>/animals/new">Add a new animal!</a>
+<a href="/">See all zoos</a>
+<% include ../partials/footer %>

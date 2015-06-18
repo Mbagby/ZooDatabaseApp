@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<h1>Edit this animal!</h1>
+<form action="/animals/<%= animal._id%>?_method=put" method="POST">
+  <div>
+      <label for="name">Animal Name:</label>
+      <input autofocus  type="text" name="animal[name]" id="name" value = "<%= animal.name%>">
+    </div>
+    <div>
+      <label for="species">Species:</label>
+      <input type="text" name="animal[species]" id="species" value = "<%= animal.species%>">
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="text" name="animal[age]" id="age" value = "<%= animal.age%>">
+    </div>
+    <div>
+      <label for="photo">Photo:</label>
+      <input type="text" name="animal[photo]" id="photo" value = "<%= animal.photo%>">
+    </div>
+    <div>
+      <input type="submit" value="Edit Animal">
+    </div>
+</form>
+<% include ../partials/footer %>
